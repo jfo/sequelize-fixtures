@@ -21,9 +21,9 @@
     "object-assign": "^4.0.1"
   },
   "devDependencies": {
+    "@sequelize/core": "^7.0.0-alpha.10",
     "mocha": "^8.0.1",
     "release-it": "^13.6.3",
-    "sequelize": "^5.0.0",
     "should": "*",
     "sinon": "^1.14.1",
     "sqlite3": "^4.1.1"
