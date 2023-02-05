@@ -25,12 +25,13 @@ exports.all = [];
     'Account',
     'SimpleJson'
 ].forEach( function (model) {
-    var mod = sequelize.import(__dirname + '/' + model);
+    var mod = require(__dirname + '/' + model)(sequelize, DataTypes);
     module.exports[model] = mod;
     exports.all.push(mod);
 });
 
 (function (m) {
+    console.log(m)
     m.Foo.belongsTo(m.Bar);
     m.Bar.hasMany(m.Foo);
     m.Project.belongsToMany(m.Person, {through: 'peopleprojects'});
