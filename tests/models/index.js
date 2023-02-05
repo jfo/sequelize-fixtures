@@ -1,4 +1,4 @@
-var Sequelize = require('sequelize'),
+var { Sequelize, DataTypes } = require('@sequelize/core'),
     sequelize = new Sequelize('database', 'username', 'password', {
         dialect: 'sqlite',
         storage: ':memory:',
